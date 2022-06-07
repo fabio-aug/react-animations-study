@@ -22,8 +22,6 @@ function Home() {
                         Rotações
                     </Button>
                 </Link>
-                <Button color='#aaccdd'> CSS Puro </Button>
-                <Button color='#aaccdd'> CSS Puro </Button>
             </Buttons>
 
             <Title> 2. bibliotecas</Title>
