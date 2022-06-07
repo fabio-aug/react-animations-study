@@ -8,6 +8,7 @@ import {
 
 // Pages
 import Home from './home/Home';
+import Spring from './reactSpring/Spring';
 import Transitions from './transitions/Transitions';
 
 function Routes() {
@@ -23,6 +24,11 @@ function Routes() {
             path: "/transitions",
             exact: true,
             component: <Transitions />
+        },
+        {
+            path: "/spring",
+            exact: true,
+            component: <Spring />
         },
     ];
 

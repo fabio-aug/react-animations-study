@@ -25,6 +25,14 @@ function Home() {
             </Buttons>
 
             <Title> 2. bibliotecas</Title>
+
+            <Buttons>
+                <Link to="/spring">
+                    <Button color='#aaccdd'>
+                        React Spring
+                    </Button>
+                </Link>
+            </Buttons>
         </Container>
     )
 }
