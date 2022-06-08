@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
@@ -7,11 +7,6 @@ import { Title } from './../../components/Title';
 import { Button } from './../../components/Button';
 
 function Home() {
-
-    useEffect(() => {
-        console.log('salve');
-    }, [])
-
     return (
         <Container>
             <Title> 1. css puro</Title>
@@ -19,7 +14,17 @@ function Home() {
             <Buttons>
                 <Link to="/transitions">
                     <Button color='#aaccdd'>
-                        Rotações
+                        Transition
+                    </Button>
+                </Link>
+                <Link to="/transforms">
+                    <Button color='#aaccdd'>
+                        Transform
+                    </Button>
+                </Link>
+                <Link to="/ideas-css">
+                    <Button color='#aaccdd'>
+                        Ideias e exemplos
                     </Button>
                 </Link>
             </Buttons>

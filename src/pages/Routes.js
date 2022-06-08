@@ -10,6 +10,8 @@ import {
 import Home from './home/Home';
 import Spring from './reactSpring/Spring';
 import Transitions from './transitions/Transitions';
+import Transform from './transform/Transform';
+import IdeasCss from './ideasCss/IdeasCss';
 
 function Routes() {
     const component = [
@@ -30,6 +32,16 @@ function Routes() {
             exact: true,
             component: <Spring />
         },
+        {
+            path: "/transforms",
+            exact: true,
+            component: <Transform />
+        },
+        {
+            path: "/ideas-css",
+            exact: true,
+            component: <IdeasCss />
+        }
     ];
 
     return (
