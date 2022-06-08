@@ -3,8 +3,23 @@ import styled from 'styled-components';
 
 import { Container } from './../../components/Container';
 import { Title } from './../../components/Title';
+import AnimationBall from './../../components/AnimationBall';
 
 function Transitions() {
+
+    const timingFunctions = [
+        'linear',
+        'ease',
+        'ease-in',
+        'ease-in-out',
+        'ease-out',
+        'steps(5, end)',
+        'steps(3, start)',
+        'steps(4)',
+        'cubic-bezier(0.1, -0.6, 0.2, 0)',
+        'cubic-bezier(0, 1.1, 0.8, 4)',
+    ]
+
     return (
         <Container>
             <Title>
@@ -13,41 +28,29 @@ function Transitions() {
 
             <ul>
                 <li>
-                    transition-property: Define a propriedade que quer colocar a transição
+                    transition-property: Define a propriedade que quer colocar a animação
                 </li>
 
                 <li>
-                    transition-timing-function: ease;
+                    transition-timing-function: Velocidade da transição (<a href='https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function'>mais detalhes</a>)
                 </li>
 
                 <li>
-                    transition-duration: 1s;
+                    transition-duration: O tempo de duração que demora pra efetuar a animação
                 </li>
 
                 <li>
-                    transition-delay: 0s;
+                    transition-delay: Tempo após efetuada alguma ação até começar o efeito
                 </li>
             </ul>
 
             <TransitionExample />
 
             <TimingFunctionExample>
-                <p> lento - rápido - lento </p>
-                <div>Ease (Default)</div>
-
-                <p> constante </p>
-                <div>Linear</div>
-                
-                <p> lento - rápido </p>
-                <div>Ease-In</div>
-
-                <p> lento - rápido </p>
-                <div>Ease-Out</div>
-
-                <p> lento - rápido </p>
-                <div>Ease-In-Out</div>
+                {timingFunctions.map((timingFunction, idx) => (
+                    <AnimationBall key={idx} name={timingFunction} />
+                ))}
             </TimingFunctionExample>
-
         </Container>
     )
 }
@@ -62,11 +65,12 @@ const TransitionExample = styled.div`
     background-color: #000;
     border: 3px solid #ff0000;
 
-
     //transition-property: background-color;
     //transition-timing-function: ease;
     //transition-duration: 1s;
     //transition-delay: 0s;
+
+    //transition: <property> <duration> <timing-function> <delay>, <property> <duration> <timing-function> <delay>;
 
     //transition: <property> <duration> <timing-function> <delay>;
 
@@ -78,47 +82,6 @@ const TransitionExample = styled.div`
     }
 `
 
-export const TimingFunctionExample = styled.div`
-    width: 960px;
-
-    div {
-        margin: 2em;
-        width: 150px;
-        height: 50px;
-        padding: 10px 15px;
-        background-color: #000;
-        color: #fff;
-        border-radius: 0.5em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-
-        transition-property: translate();
-        transition-duration: 3s;
-    }
-
-    & div:nth-child(1) {
-        transition-timing-function: ease;
-    }
-
-    & div:nth-child(2) {
-        transition-timing-function: linear;
-    }
-
-    & div:nth-child(3) {
-        transition-timing-function: ease-in;
-    }
-
-    & div:nth-child(4) {
-        transition-timing-function: ease-out;
-    }
-
-    & div:nth-child(5) {
-        transition-timing-function: ease-in-out;
-    }
-
-    & div:hover {
-        transform: translate(900px, 0);
-    }
-`;
+const TimingFunctionExample = styled.div`
+    width: 30%;
+`
