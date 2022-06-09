@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTransition, animated } from 'react-spring'
 import { Button } from '../../components/Button'
 import { Container } from '../../components/Container'
@@ -10,13 +11,17 @@ import Component3 from './components/Component3'
 import Component4 from './components/Component4'
 import Face from './components/Face'
 import Hand from './components/Hand'
+import Box1 from './components/movimentBoxes/Box1'
+import Box2 from './components/movimentBoxes/Box2'
+import NumberGradient from './components/NumberGradient'
 import Sequence from './components/Sequence'
 import Square from './components/squares/Square'
 import Square2 from './components/squares/Square2'
 import SquareCentral from './components/squares/SquareCentral'
 import SquareVertical1 from './components/squares/SquareVertical1'
 import SquareVertical2 from './components/squares/SquareVertical2'
-import { EmojisContainer, HeaderContainer, SquareContainer } from './components/TextContainer'
+import { EmojisContainer, HeaderContainer, MovimentContainer, SquareContainer } from './components/StyledComponents'
+import TextSpring from './components/TextSpring'
 
 
 export default function Spring() {
@@ -26,7 +31,6 @@ export default function Spring() {
         from: { opacity: 0 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
-        config: { duration: 1000 }
     })
 
     return (
@@ -84,6 +88,23 @@ export default function Spring() {
                 <SquareVertical2/>
             </SquareContainer>
 
+            <SquareContainer>
+                <TextSpring/>
+                <NumberGradient/>
+            </SquareContainer>
+
+            <MovimentContainer>
+                <Box1/>
+                <Box2/>
+            </MovimentContainer>
+
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: "center"}}>
+                <Link to="/parallax">
+                    <Button color='#aaccdd'>
+                        Parallax
+                    </Button>
+                </Link>
+            </div>
         </Container>
     )
 }

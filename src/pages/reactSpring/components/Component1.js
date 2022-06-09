@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSpring } from 'react-spring'
-import { NumberContainer, TextContainer1 } from './TextContainer';
+import { NumberContainer, TextContainer1 } from './StyledComponents';
 
 export default function Component1() {
 

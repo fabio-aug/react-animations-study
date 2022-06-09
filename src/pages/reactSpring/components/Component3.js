@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextContainer3 } from './TextContainer';
+import { TextContainer3 } from './StyledComponents';
 
 export default function Component3() {
 

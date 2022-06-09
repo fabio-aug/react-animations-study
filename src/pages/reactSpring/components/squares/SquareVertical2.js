@@ -4,13 +4,13 @@ import { animated, easings, useSpring } from 'react-spring';
 export default function SquareVertical2() {
     const { background, rotateZ, scale, marginTop } = useSpring({
         from: {
-            background: 'purple',
+            background: '#8463E8',
             rotateZ: 0,
             scale: 0.5,
             marginTop: 0,
         },
         to: {
-            background: 'red',
+            background: '#1DFF3E',
             rotateZ: -225,
             scale: 1,
             marginTop: 200,

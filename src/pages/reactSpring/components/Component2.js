@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSpring } from 'react-spring'
-import { TextContainer2 } from './TextContainer';
+import { TextContainer2 } from './StyledComponents';
 
 export default function Component2() {
     const props = useSpring({ 
