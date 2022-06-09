@@ -21,8 +21,6 @@ export default function ParallaxPage() {
                     <ParallaxHeader/>
                 </ParallaxLayer>
 
-                <h1 style={{marginTop: 100}}>AAAAAAAAAAAAAAAAA</h1>
-
                 <ParallaxLayer
                     offset={0}
                     speed={2}
