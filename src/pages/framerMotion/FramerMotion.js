@@ -20,9 +20,17 @@ function FramerMotion() {
 
             <AnimationMotion />
 
-            <TabMotion />
+            <div style={{
+                display: 'flex', 
+                justifyContent: 'space-evenly', 
+                width: "100%", 
+                marginTop: 120, 
+                marginBottom: 100
+            }}>
+                <TabMotion />
 
-            <DotsMotion />
+                <DotsMotion />
+            </div>
 
         </Container>
     )

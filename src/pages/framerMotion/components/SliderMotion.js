@@ -6,11 +6,16 @@ function SliderMotion() {
     const [imgIndex, setImgIndex] = useState(0)
     const [direction, setDirection] = useState(0)
 
+    //'https://wallpaperaccess.com/full/109672.jpg',
+    //'https://wallpaperaccess.com/full/109666.jpg',
+    //'https://wallpaperaccess.com/full/23632.jpg',
+    //'https://wallpaperaccess.com/full/23621.jpg',
+
     const imgs = [
-        'https://wallpaperaccess.com/full/109672.jpg',
-        'https://wallpaperaccess.com/full/109666.jpg',
-        'https://wallpaperaccess.com/full/23632.jpg',
-        'https://wallpaperaccess.com/full/23621.jpg',
+        'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1fb651358bfe01fe/60c10342d475801b9d54fe31/TORNEIOS_DE_COMUNIDADE_VAL_CARD.jpg',
+        'https://www.gamereactor.pt/media/16/blastrevealplayer_2281643b.jpg',
+        'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd2aa3a9a266412f2/60c101b11b32a31d5305c22d/TORNEIOS-DE-COMUNIDADE-BANNER-SITE_TFT.jpg',
+        'https://business-portal-bucket.s3.amazonaws.com/media/images/WePlay_AniMajor_1920x1080.original.jpg',
     ]
 
     function changeImg(directionImg) {
@@ -33,6 +38,9 @@ function SliderMotion() {
     return (
         <Box>
             <Button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="prev"
@@ -62,11 +70,15 @@ function SliderMotion() {
                         translateX: { type: "spring", stiffness: 300, damping: 30 },
                         opacity: { duration: 0.2 }
                     }}
-                    height={300}
+                    height={550}
+                    width={"100%"}
                 />
             </AnimatePresence>
 
             <Button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="next"
@@ -81,20 +93,23 @@ function SliderMotion() {
 export default SliderMotion;
 
 const Button = styled(motion.button)`
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    height: 80px;
+    width: 30px;
+    border-radius: 10%;
     background-color: white;
     color: black;
     font-size: 20px;
     position: absolute;
+    cursor: pointer;
     z-index: 2;
 `;
 
 const Box = styled.div`
     margin-top: 10px;
-    width: 50%;
-    height: 500px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 60%;
+    height: 550px;
     padding: 20px;
     background-color: black;
     overflow: hidden;
