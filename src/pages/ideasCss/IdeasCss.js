@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { Container } from './../../components/Container';
 import { Title } from './../../components/Title';
 
-import Jett1 from './../../images/jett1.gif';
+import FloatingCSS from './components/FloatingCSS';
 
 function IdeasCss() {
     return (
@@ -14,43 +13,10 @@ function IdeasCss() {
                     Ideias
                 </Title>
 
-                <Floating>
-                    <img src={Jett1} className='floating' alt='Jett knife' />
-                </Floating>
+                <FloatingCSS />
             </Container>
         </div>
     )
 }
 
 export default IdeasCss;
-
-const Floating = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 50%;
-
-    .floating { 
-        //animation-name: floating;
-        //animation-duration: 3s;
-        //animation-timing-function: ease-in-out;
-        //animation-iteration-count: infinite;
-
-        animation: floating 3s ease-in-out infinite;
-        margin-left: 30px;
-        margin-top: 5px;
-
-        transition: transform 1s;
-    }
-
-    @keyframes floating {
-        0% {
-            transform: translateY(0px);
-        }
-        50%  {
-            transform: translateY(15px);
-        }
-        100%   {
-            transform: translateY(-0px);
-        }
-    }
-`;

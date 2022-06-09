@@ -37,6 +37,11 @@ function Home() {
                         React Spring
                     </Button>
                 </Link>
+                <Link to="/framer-motion">
+                    <Button color='#aaccdd'>
+                        Framer Motion
+                    </Button>
+                </Link>
             </Buttons>
         </Container>
     )

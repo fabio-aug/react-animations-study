@@ -12,6 +12,7 @@ import Spring from './reactSpring/Spring';
 import Transitions from './transitions/Transitions';
 import Transform from './transform/Transform';
 import IdeasCss from './ideasCss/IdeasCss';
+import FramerMotion from './framerMotion/FramerMotion';
 
 function Routes() {
     const component = [
@@ -41,6 +42,11 @@ function Routes() {
             path: "/ideas-css",
             exact: true,
             component: <IdeasCss />
+        },
+        {
+            path: "/framer-motion",
+            exact: true,
+            component: <FramerMotion />
         }
     ];
 
