@@ -5,12 +5,8 @@ import ParallaxHeader from '../components/ParallaxHeader'
 
 import Jett from './../../../images/jett.png';
 import Phoenix from './../../../images/phoenix.png';
-import Chorando from './../../../images/chorando.png';
-import Rindo from './../../../images/rindo.png';
 import { Button } from '../../../components/Button';
-import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
-
 
 export default function Horizontal() {
     const ref = useRef();
@@ -36,7 +32,7 @@ export default function Horizontal() {
                     offset={0}
                     speed={1}
                     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: "column" , fontSize: 100 }}>
-                    <animated.p style={propsHeader}>Scroll down</animated.p>
+                    <animated.p style={propsHeader}>Scroll Right</animated.p>
                     <animated.p style={propsSubtitle}>Amazing Experience with Parallax</animated.p>
                 </ParallaxLayer>
 
@@ -77,7 +73,7 @@ export default function Horizontal() {
                             textAlign: 'center',
                             borderRadius: '10px',
                         }}>
-                            <Button color='#aaccdd' onClick={() => ref.current.scrollTo(0)}>
+                            <Button color='red' onClick={() => ref.current.scrollTo(0)}>
                                 Ir para o topo
                             </Button>
                         </div>
