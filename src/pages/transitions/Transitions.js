@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Container } from './../../components/Container';
 import { Title } from './../../components/Title';
-import AnimationBall from './../../components/AnimationBall';
+import AnimationBall from './components/AnimationBall';
 
 function Transitions() {
 

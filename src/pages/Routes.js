@@ -12,6 +12,7 @@ import Spring from './reactSpring/Spring';
 import Transitions from './transitions/Transitions';
 import Transform from './transform/Transform';
 import IdeasCss from './ideasCss/IdeasCss';
+import FramerMotion from './framerMotion/FramerMotion';
 import Parallax from './reactSpring/Parallax';
 import Horizontal from './reactSpring/horizontalParallax/Horizontal';
 
@@ -53,6 +54,11 @@ function Routes() {
             path: "/ideas-css",
             exact: true,
             component: <IdeasCss />
+        },
+        {
+            path: "/framer-motion",
+            exact: true,
+            component: <FramerMotion />
         }
     ];
 
