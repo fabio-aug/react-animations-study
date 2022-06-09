@@ -13,6 +13,8 @@ import Transitions from './transitions/Transitions';
 import Transform from './transform/Transform';
 import IdeasCss from './ideasCss/IdeasCss';
 import FramerMotion from './framerMotion/FramerMotion';
+import Parallax from './reactSpring/Parallax';
+import Horizontal from './reactSpring/horizontalParallax/Horizontal';
 
 function Routes() {
     const component = [
@@ -32,6 +34,16 @@ function Routes() {
             path: "/spring",
             exact: true,
             component: <Spring />
+        },
+        {
+            path: "/parallax",
+            exact: true,
+            component: <Parallax />
+        },
+        {
+            path: "/horizontal",
+            exact: true,
+            component: <Horizontal />
         },
         {
             path: "/transforms",

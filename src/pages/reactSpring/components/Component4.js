@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { config, useSpring, useTransition } from 'react-spring'
-import { TextContainer4 } from './TextContainer';
+import { config, useTransition } from 'react-spring'
+import { TextContainer4 } from './StyledComponents';
 
 export default function Component4() {
     const [show, set] = useState(true);

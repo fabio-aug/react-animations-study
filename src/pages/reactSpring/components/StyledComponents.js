@@ -55,3 +55,10 @@ export const SquareContainer = styled(animated.div)`
     width: 100%;
     justify-content: space-around;
 `;
+
+
+export const MovimentContainer = styled(animated.div)`
+    margin-top: 50px;
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
+    width: 100%;
+`;
