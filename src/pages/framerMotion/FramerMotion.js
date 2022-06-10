@@ -8,6 +8,7 @@ import SliderMotion from './components/SliderMotion';
 import FloatingMotion from './components/FloatingMotion';
 import TabMotion from './components/TabMotion';
 import DotsMotion from './components/DotsMotion';
+import Variants from './components/Variants';
 
 function FramerMotion() {
     return (

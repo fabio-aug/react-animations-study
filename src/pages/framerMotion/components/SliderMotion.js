@@ -71,6 +71,25 @@ function SliderMotion() {
         setDirection(directionImg);
     }
 
+    const variant = {
+        initial: (dic) => ({
+            translateX: dic > 0 ? 1000 : -1000,
+            opacity: 0
+        }),
+        animate: {
+            translateX: 0,
+            opacity: 1
+        },
+        exit: (dic) => ({
+            translateX: dic < 0 ? 1000 : -1000,
+            opacity: 0
+        }),
+        transition: {
+            translateX: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+        }
+    }
+
     return (
         <Box>
             <Button
@@ -100,29 +119,17 @@ function SliderMotion() {
                     key={imgs[imgIndex].value}
                     src={imgs[imgIndex].value}
                     custom={direction}
-                    initial={{
-                        translateX: direction > 0 ? 1000 : -1000,
-                        opacity: 0
-                    }}
-                    animate={{
-                        translateX: 0,
-                        opacity: 1
-                    }}
-                    exit={{
-                        translateX: direction < 0 ? 1000 : -1000,
-                        opacity: 0
-                    }}
-                    transition={{
-                        translateX: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
-                    }}
+                    variants={variant}
+                    initial={'initial'}
+                    animate={'animate'}
+                    exit={'exit'}
+                    transition={'transition'}
                     height={550}
                     width={"100%"}
                 />
 
                 <Text
                     key={imgTitle}
-                    custom={direction}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{opacity: 0 }}>
