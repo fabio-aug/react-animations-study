@@ -32,10 +32,11 @@ function FramerMotion() {
                 <TabMotion />
 
                 <DotsMotion />
-
             </div>
-            
+
             <TextMotion/>
+
+            <Variants />
 
         </Container>
     )

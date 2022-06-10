@@ -84,10 +84,6 @@ function SliderMotion() {
             translateX: dic < 0 ? 1000 : -1000,
             opacity: 0
         }),
-        transition: {
-            translateX: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
-        }
     }
 
     const swipePower = (offset, velocity) => {
@@ -127,7 +123,10 @@ function SliderMotion() {
                     initial={'initial'}
                     animate={'animate'}
                     exit={'exit'}
-                    transition={'transition'}
+                    transition={{
+                        translateX: { type: "spring", stiffness: 300, damping: 30 },
+                        opacity: { duration: 0.2 }
+                    }}
                     drag="x"
                     dragConstraints={{ left: 0, right: 0 }}
                     dragElastic={1}
