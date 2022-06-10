@@ -9,6 +9,7 @@ import FloatingMotion from './components/FloatingMotion';
 import TabMotion from './components/TabMotion';
 import DotsMotion from './components/DotsMotion';
 import TextMotion from './components/TextMotion';
+import Variants from './components/Variants';
 
 function FramerMotion() {
     return (
@@ -31,10 +32,11 @@ function FramerMotion() {
                 <TabMotion />
 
                 <DotsMotion />
-
             </div>
-            
+
             <TextMotion/>
+
+            <Variants />
 
         </Container>
     )
