@@ -9,7 +9,6 @@ function SliderMotion() {
     const [imgTitle, setImgTitle] = useState('Torneio de Valorant');
 
     const [time, setTime] = useState('04:00');
-    
 
     //'https://wallpaperaccess.com/full/109672.jpg',
     //'https://wallpaperaccess.com/full/109666.jpg',
@@ -122,7 +121,8 @@ function SliderMotion() {
                 />
 
                 <Text
-                    key={"title"}
+                    key={imgTitle}
+                    custom={direction}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{opacity: 0 }}>
