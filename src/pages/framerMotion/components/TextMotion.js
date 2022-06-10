@@ -27,7 +27,7 @@ export default function TextMotion() {
                 animate={{ opacity: 1, x: 0}}
                 transition={{ duration: 1 }}
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.9 }}
+                whileTap={{ scale: 0.95 }}
                 drag
                 dragConstraints={{
                     top: -1,

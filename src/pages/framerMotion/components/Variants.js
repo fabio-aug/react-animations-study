@@ -32,7 +32,10 @@ function Variants() {
                     initial={'initial'}
                     animate={'animate'}
                     transition={{
-                        duration: i * 0.3,
+                        type: "spring",
+                        delay: i * 0.3,
+                        stiffness: 50
+                        //duration: 1
                     }}
                 >
                     {num}
