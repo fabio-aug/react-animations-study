@@ -9,7 +9,7 @@ export default function TextMotion() {
     return (
         <div style={{height: 300, display: 'flex', alignItems: 'center', marginBottom: 50, justifyContent: 'center', width: "100%"}}>
             <Left
-                initial={{ opacity: 0, x: -width}}
+                initial={{ opacity: 0, x: -width/4}}
                 animate={{ opacity: 1, x: 0}}
                 transition={{ duration: 1 }}
                 
@@ -23,7 +23,7 @@ export default function TextMotion() {
                 transition={{ duration: 1 }}
                 /> */}
             <Right
-                initial={{ opacity: 0, x: width}}
+                initial={{ opacity: 0, x: width/4}}
                 animate={{ opacity: 1, x: 0}}
                 transition={{ duration: 1 }}
                 whileHover={{ scale: 1.05 }}
