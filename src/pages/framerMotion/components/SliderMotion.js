@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -7,6 +7,9 @@ function SliderMotion() {
     const [direction, setDirection] = useState(0)
 
     const [imgTitle, setImgTitle] = useState('Torneio de Valorant');
+
+    const [time, setTime] = useState('04:00');
+    
 
     //'https://wallpaperaccess.com/full/109672.jpg',
     //'https://wallpaperaccess.com/full/109666.jpg',
@@ -19,6 +22,34 @@ function SliderMotion() {
         {label: 'Torneio de League Of Legends', value: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd2aa3a9a266412f2/60c101b11b32a31d5305c22d/TORNEIOS-DE-COMUNIDADE-BANNER-SITE_TFT.jpg'},
         {label: 'Torneio de Dota', value: 'https://business-portal-bucket.s3.amazonaws.com/media/images/WePlay_AniMajor_1920x1080.original.jpg'},
     ]
+
+    useEffect(() => {
+        timer(240);
+    }, []);
+
+    function timer(duration){
+        
+        let timers = duration;
+
+        setInterval(() => {
+            let minutes = '';
+            let seconds = '';
+
+            minutes = parseInt(timers / 60, 10);
+            seconds = parseInt(timers % 60, 10);
+
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            let formated = minutes + ':' + seconds;
+
+            setTime(formated)
+
+            if(--timers < 0) {
+                timers = duration;
+            }
+        }, 1000)
+    }
 
     function changeImg(directionImg) {
         if (directionImg === -1) {
@@ -56,6 +87,16 @@ function SliderMotion() {
             </Button>
 
             <AnimatePresence initial={false} custom={direction}>
+                <TimerText
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{opacity: 0 }}>
+                        Fechamento do Mercado
+                        <Clock>
+                            {time}
+                        </Clock>
+                </TimerText>
+
                 <motion.img
                     key={imgs[imgIndex].value}
                     src={imgs[imgIndex].value}
@@ -81,7 +122,7 @@ function SliderMotion() {
                 />
 
                 <Text
-                    custom={imgTitle}
+                    key={"title"}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{opacity: 0 }}>
@@ -119,7 +160,7 @@ const Button = styled(motion.button)`
 `;
 
 const Text = styled(motion.h1)`
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,9 +169,28 @@ const Text = styled(motion.h1)`
     font-family: open sans;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 32px;
     bottom: 40px;
     position: absolute;
+    z-index: 2;
+`;
+
+const TimerText = styled(motion.div)`
+    height: 40px;
+    font-family: open sans;
+    color: white;
+    font-size: 20px;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    z-index: 2;
+`;
+
+const Clock = styled(motion.h2)`
+    height: 40px;
+    font-family: open sans;
+    color: white;
+    font-size: 30px;
     z-index: 2;
 `;
 
