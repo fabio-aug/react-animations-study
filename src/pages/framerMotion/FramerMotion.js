@@ -8,6 +8,7 @@ import SliderMotion from './components/SliderMotion';
 import FloatingMotion from './components/FloatingMotion';
 import TabMotion from './components/TabMotion';
 import DotsMotion from './components/DotsMotion';
+import TextMotion from './components/TextMotion';
 import Variants from './components/Variants';
 
 function FramerMotion() {
@@ -31,7 +32,10 @@ function FramerMotion() {
                 <TabMotion />
 
                 <DotsMotion />
+
             </div>
+            
+            <TextMotion/>
 
         </Container>
     )

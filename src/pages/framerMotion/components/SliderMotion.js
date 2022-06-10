@@ -90,6 +90,10 @@ function SliderMotion() {
         }
     }
 
+    const swipePower = (offset, velocity) => {
+        return Math.abs(offset) * velocity;
+    };
+
     return (
         <Box>
             <Button
@@ -124,6 +128,18 @@ function SliderMotion() {
                     animate={'animate'}
                     exit={'exit'}
                     transition={'transition'}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                        const swipe = swipePower(offset.x, velocity.x);
+            
+                        if (swipe < -10000) {
+                            changeImg(1)
+                        } else if (swipe > 10000) {
+                            changeImg(-1);
+                        }
+                    }}
                     height={550}
                     width={"100%"}
                 />
