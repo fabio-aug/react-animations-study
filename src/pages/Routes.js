@@ -15,6 +15,8 @@ import IdeasCss from './ideasCss/IdeasCss';
 import FramerMotion from './framerMotion/FramerMotion';
 import Parallax from './reactSpring/Parallax';
 import Horizontal from './reactSpring/horizontalParallax/Horizontal';
+import ReactParallax from './reactParallax/ReactParallax';
+import ReactScrollParallax from './reactScrollParallax/ReactScrollParallax';
 
 function Routes() {
     const component = [
@@ -59,6 +61,16 @@ function Routes() {
             path: "/framer-motion",
             exact: true,
             component: <FramerMotion />
+        },
+        {
+            path: '/react-parallax',
+            exact: true,
+            component: <ReactParallax />
+        },
+        {
+            path: '/react-scroll-parallax',
+            exact: true,
+            component: <ReactScrollParallax />
         }
     ];
 

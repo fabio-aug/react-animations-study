@@ -9,37 +9,52 @@ import { Button } from './../../components/Button';
 function Home() {
     return (
         <Container>
-            <Title> 1. css puro</Title>
+            <Title> 1. css</Title>
 
             <Buttons>
                 <Link to="/transitions">
-                    <Button color='#aaccdd'>
+                    <Button color='#aaaaff'>
                         Transition
                     </Button>
                 </Link>
                 <Link to="/transforms">
-                    <Button color='#aaccdd'>
+                    <Button color='#aaaaff'>
                         Transform
                     </Button>
                 </Link>
                 <Link to="/ideas-css">
-                    <Button color='#aaccdd'>
+                    <Button color='#aaaaff'>
                         Ideias e exemplos
                     </Button>
                 </Link>
             </Buttons>
 
-            <Title> 2. bibliotecas</Title>
+            <Title> 2. Animations</Title>
 
             <Buttons>
                 <Link to="/spring">
-                    <Button color='#aaccdd'>
+                    <Button color='#aaffaa'>
                         React Spring
                     </Button>
                 </Link>
                 <Link to="/framer-motion">
-                    <Button color='#aaccdd'>
+                    <Button color='#aaffaa'>
                         Framer Motion
+                    </Button>
+                </Link>
+            </Buttons>
+
+            <Title> 3. Parallax</Title>
+
+            <Buttons>
+                <Link to="/react-parallax">
+                    <Button color='#ffaaaa'>
+                        React Parallax
+                    </Button>
+                </Link>
+                <Link to="/react-scroll-parallax">
+                    <Button color='#ffaaaa'>
+                        React Scroll Parallax
                     </Button>
                 </Link>
             </Buttons>
