@@ -12,7 +12,6 @@ export default function TextMotion() {
                 initial={{ opacity: 0, x: -width/4}}
                 animate={{ opacity: 1, x: 0}}
                 transition={{ duration: 1 }}
-                
             >
                 Vindo da esquerda
             </Left>
