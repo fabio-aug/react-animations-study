@@ -1,36 +1,35 @@
-import React, { useRef } from 'react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { Container } from '../../components/Container'
-import ParallaxHeader from './components/ParallaxHeader'
+import React, { useRef } from 'react';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { Link } from 'react-router-dom';
 
+import { Container } from '../../components/Container';
+import ParallaxHeader from './components/ParallaxHeader';
 import Jett from './../../images/jett.png';
 import Phoenix from './../../images/phoenix.png';
 import Chorando from './../../images/chorando.png';
 import Rindo from './../../images/rindo.png';
 import { Button } from '../../components/Button';
-import { Link } from 'react-router-dom';
 
-
-export default function ParallaxPage() {
+export default function ReactSpringParallax() {
     const ref = useRef()
 
     return (
         <Container>
             <Parallax pages={6} style={{ top: '0', left: '0' }} ref={ref}>
                 <ParallaxLayer sticky={{ start: 0, end: 4 }}>
-                    <ParallaxHeader/>
+                    <ParallaxHeader />
                 </ParallaxLayer>
 
                 <ParallaxLayer
                     offset={0}
                     speed={2}
-                    style={{ 
-                        display: 'flex', 
-                        justifyContent: 'center', 
-                        alignItems: 'center', 
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
                         fontSize: 100,
                     }}>
-                        <p>Scroll down</p>
+                    <p>Scroll down</p>
                 </ParallaxLayer>
 
                 <ParallaxLayer
@@ -43,17 +42,13 @@ export default function ParallaxPage() {
                 <ParallaxLayer
                     offset={0.9}
                     speed={0.8}
-                    style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-                        <img src={Jett} width={600} alt="jett" height={500}/>
-                        <ParallaxLayer
-                            offset={0.3}
-                            speed={0.6}
-                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 40 }}> 
-                                <h3>Não cai no falso png 😎</h3>
-                        </ParallaxLayer>
-                        <img src={Phoenix} alt="phoenix" width={600} height={500}/>
+                    style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}
+                >
+                    <img src={Jett} width={600} alt="jett" height={500} />
+                    <h3>Não cai no falso png 😎</h3>
+                    <img src={Phoenix} alt="phoenix" width={600} height={500} />
                 </ParallaxLayer>
-                
+
                 <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
 
                 <ParallaxLayer
@@ -65,7 +60,7 @@ export default function ParallaxPage() {
                         alignItems: 'center',
                         color: 'white',
                     }}>
-                    <h4 style={{fontSize: 40, fontFamily: 'Roboto'}}>Escale seu time para os campeonatos</h4>
+                    <h4 style={{ fontSize: 40, fontFamily: 'Roboto' }}>Escale seu time para os campeonatos</h4>
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#DB0D54', height: '100%' }} />
@@ -102,7 +97,7 @@ export default function ParallaxPage() {
                         borderRadius: '10px',
                         marginRight: '15%'
                     }}>
-                        <h2 style={{fontSize: 20, fontFamily: "Roboto"}}>Eu NÃO estou</h2>
+                        <h2 style={{ fontSize: 20, fontFamily: "Roboto" }}>Eu NÃO estou</h2>
                     </div>
                 </ParallaxLayer>
 
@@ -112,8 +107,9 @@ export default function ParallaxPage() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         textAlign: 'center',
-                        marginRight: '15%'}}>
-                        <img src={Chorando} alt="laughing" width={500} height={500}/>
+                        marginRight: '15%'
+                    }}>
+                        <img src={Chorando} alt="laughing" width={500} height={500} />
                     </div>
                 </ParallaxLayer>
 
@@ -130,8 +126,9 @@ export default function ParallaxPage() {
                         textAlign: 'center',
                         backgroundColor: '#FA7F08',
                         borderRadius: '10px',
-                        marginRight: '15%'}}>
-                        <h2 style={{fontSize: 20, fontFamily: "Roboto"}}>Eu também não</h2>
+                        marginRight: '15%'
+                    }}>
+                        <h2 style={{ fontSize: 20, fontFamily: "Roboto" }}>Eu também não</h2>
                     </div>
                 </ParallaxLayer>
 
@@ -141,13 +138,14 @@ export default function ParallaxPage() {
                         justifyContent: 'center',
                         alignItems: 'center',
                         textAlign: 'center',
-                        marginRight: '15%'}}>
-                        <img src={Rindo} alt="smile" width={600} height={500}/>
+                        marginRight: '15%'
+                    }}>
+                        <img src={Rindo} alt="smile" width={600} height={500} />
                     </div>
                 </ParallaxLayer>
 
-                <ParallaxLayer sticky={{start: 5, end: 5}} style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                    <Link to="/horizontal">
+                <ParallaxLayer sticky={{ start: 5, end: 5 }} style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <Link to="/react-spring-parallax-horizontal">
                         <Button color='#aaccdd'>
                             Parallax horizontal
                         </Button>

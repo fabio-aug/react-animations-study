@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useTransition, animated } from 'react-spring'
-import { Button } from '../../components/Button'
-import { Container } from '../../components/Container'
-import { Subtitle } from '../../components/Subtitle'
-import { Title } from '../../components/Title'
-import Component1 from './components/Component1'
-import Component2 from './components/Component2'
-import Component3 from './components/Component3'
-import Component4 from './components/Component4'
-import Face from './components/Face'
-import Hand from './components/Hand'
-import Box1 from './components/movimentBoxes/Box1'
-import Box2 from './components/movimentBoxes/Box2'
-import NumberGradient from './components/NumberGradient'
-import Sequence from './components/Sequence'
-import Square from './components/squares/Square'
-import Square2 from './components/squares/Square2'
-import SquareCentral from './components/squares/SquareCentral'
-import SquareVertical1 from './components/squares/SquareVertical1'
-import SquareVertical2 from './components/squares/SquareVertical2'
-import { EmojisContainer, HeaderContainer, MovimentContainer, SquareContainer } from './components/StyledComponents'
-import TextSpring from './components/TextSpring'
-
+import React, { useState } from 'react';
+import { useTransition, animated } from 'react-spring';
+import { Button } from '../../components/Button';
+import { Container } from '../../components/Container';
+import { Subtitle } from '../../components/Subtitle';
+import { Title } from '../../components/Title';
+import Component1 from './components/Component1';
+import Component2 from './components/Component2';
+import Component3 from './components/Component3';
+import Component4 from './components/Component4';
+import Face from './components/Face';
+import Hand from './components/Hand';
+import Box1 from './components/movimentBoxes/Box1';
+import Box2 from './components/movimentBoxes/Box2';
+import NumberGradient from './components/NumberGradient';
+import Sequence from './components/Sequence';
+import Square from './components/squares/Square';
+import Square2 from './components/squares/Square2';
+import SquareCentral from './components/squares/SquareCentral';
+import SquareVertical1 from './components/squares/SquareVertical1';
+import SquareVertical2 from './components/squares/SquareVertical2';
+import { EmojisContainer, HeaderContainer, MovimentContainer, SquareContainer } from './components/StyledComponents';
+import TextSpring from './components/TextSpring';
 
 export default function Spring() {
     const [show, setShow] = useState(true);
@@ -97,14 +95,6 @@ export default function Spring() {
                 <Box1/>
                 <Box2/>
             </MovimentContainer>
-
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: "center"}}>
-                <Link to="/parallax">
-                    <Button color='#aaccdd'>
-                        Parallax
-                    </Button>
-                </Link>
-            </div>
         </Container>
     )
 }

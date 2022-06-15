@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import { Container } from './../../components/Container';
 import { Title } from './../../components/Title';
@@ -55,6 +55,11 @@ function Home() {
                 <Link to="/react-scroll-parallax">
                     <Button color='#ffaaaa'>
                         React Scroll Parallax
+                    </Button>
+                </Link>
+                <Link to="/react-spring-parallax">
+                    <Button color='#ffaaaa'>
+                        React Spring Parallax
                     </Button>
                 </Link>
             </Buttons>

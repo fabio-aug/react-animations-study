@@ -1,14 +1,14 @@
-import React, { useRef } from 'react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { Container } from '../../../components/Container'
-import ParallaxHeader from '../components/ParallaxHeader'
+import React, { useRef } from 'react';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { Container } from '../../../components/Container';
 
 import Jett from './../../../images/jett.png';
 import Phoenix from './../../../images/phoenix.png';
 import { Button } from '../../../components/Button';
 import { useSpring, animated } from 'react-spring';
+import ParallaxHeader from '../components/ParallaxHeader';
 
-export default function Horizontal() {
+export default function ReactSpringParallaxHorizontal() {
     const ref = useRef();
 
     const propsHeader = useSpring({ 

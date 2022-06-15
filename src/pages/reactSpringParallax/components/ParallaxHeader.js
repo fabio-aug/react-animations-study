@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 export default function ParallaxHeader() {
     return (
-        <header style={{backgroundColor: 'lightblue', width: "100%", height: 60, display: 'flex', justifyContent: "space-around", alignItems: "center"}}>
+        <header style={{ backgroundColor: 'lightblue', width: "100%", height: 60, display: 'flex', justifyContent: "space-around", alignItems: "center" }}>
             <div>
                 <h2>eDraft League</h2>
             </div>
-            <ul style={{listStyle: 'none', display: 'flex', justifyContent: "center", alignItems: "center"}}>
+            <ul style={{ listStyle: 'none', display: 'flex', justifyContent: "center", alignItems: "center" }}>
                 <List>
-                   <Alist href='/parallax'>Home</Alist>
+                    <Alist href='/parallax'>Home</Alist>
                 </List>
                 <List>
                     <Alist href='/parallax'>Perfil</Alist>
@@ -27,7 +27,6 @@ export default function ParallaxHeader() {
         </header>
     )
 }
-
 
 const List = styled.li`
     text-decoration: none;

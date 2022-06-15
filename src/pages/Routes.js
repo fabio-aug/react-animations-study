@@ -13,10 +13,10 @@ import Transitions from './transitions/Transitions';
 import Transform from './transform/Transform';
 import IdeasCss from './ideasCss/IdeasCss';
 import FramerMotion from './framerMotion/FramerMotion';
-import Parallax from './reactSpring/Parallax';
-import Horizontal from './reactSpring/horizontalParallax/Horizontal';
 import ReactParallax from './reactParallax/ReactParallax';
 import ReactScrollParallax from './reactScrollParallax/ReactScrollParallax';
+import ReactSpringParallax from './reactSpringParallax/ReactSpringParallax';
+import ReactSpringParallaxHorizontal from './reactSpringParallax/horizontalParallax/Horizontal';
 
 function Routes() {
     const component = [
@@ -36,16 +36,6 @@ function Routes() {
             path: "/spring",
             exact: true,
             component: <Spring />
-        },
-        {
-            path: "/parallax",
-            exact: true,
-            component: <Parallax />
-        },
-        {
-            path: "/horizontal",
-            exact: true,
-            component: <Horizontal />
         },
         {
             path: "/transforms",
@@ -71,7 +61,17 @@ function Routes() {
             path: '/react-scroll-parallax',
             exact: true,
             component: <ReactScrollParallax />
-        }
+        },
+        {
+            path: "/react-spring-parallax",
+            exact: true,
+            component: <ReactSpringParallax />
+        },
+        {
+            path: "/react-spring-parallax-horizontal",
+            exact: true,
+            component: <ReactSpringParallaxHorizontal />
+        },
     ];
 
     return (
